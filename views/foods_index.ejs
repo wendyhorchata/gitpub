@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to GitPub</title>
+    <title>Welcome to Gitpub</title>
     <style type='text/css'>
         body {
             color: blanchedalmond;
@@ -13,12 +13,20 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to GitPub</h1>
     <h2>Drinks</h2>
     <ul>
         <% for(let i = 0; i < allDrinks.length; i++) { %>
-            <li id='drink'>
-                <a href="/drinks/<%=i%>"><%=allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %></a>
+            <li>
+                <a style='text-decoration: none;' href="#"><%=allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %></a>
+            </li>
+            <br>
+        <% } %>
+    </ul>
+    <h2>Foods</h2>
+    <ul>
+        <% for(let i = 0; i < allFoods.length; i++) { %>
+            <li>
+                <a href="/foods/<%=i%>"><%=allFoods[i].name.charAt(0).toUpperCase() + allFoods[i].name.slice(1) %></a>
             </li>
             <br>
         <% } %>
