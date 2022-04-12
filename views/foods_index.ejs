@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Gitpub</title>
-    <style type='text/css'>
-        body {
-            color: blanchedalmond;
-            background-color: steelblue;
-        }
-    </style>
+    <title>Food</title>
 </head>
 <body>
-    <h2>Drinks</h2>
-    <ul>
-        <% for(let i = 0; i < allDrinks.length; i++) { %>
-            <li>
-                <a style='text-decoration: none;' href="#"><%=allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %></a>
-            </li>
-            <br>
-        <% } %>
-    </ul>
-    <h2>Foods</h2>
-    <ul>
-        <% for(let i = 0; i < allFoods.length; i++) { %>
-            <li>
-                <a href="/foods/<%=i%>"><%=allFoods[i].name.charAt(0).toUpperCase() + allFoods[i].name.slice(1) %></a>
-            </li>
-            <br>
-        <% } %>
-    </ul>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+    </style>
+
+<h1>Welcome to GitPub - Food Menu</h1>
+
+<ul>
+    <% for (let item in allFood){%>
+    <li>
+        <a href="/food/<%= item %>"><%= allFood[item].name%></a>
+       <% } %> 
+    </li>
+</ul>
+<a href="/"> Return Home </a>
+
+
 </body>
 </html>

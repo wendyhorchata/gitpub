@@ -4,33 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Foods</title>
-    <style>
-         header {
-            text-align: left;
-            margin: 2em;
-        }
-        body {
-            max-width: 300px;
-            margin-left: 5%;
-            color: blanchedalmond;
-            background-color: steelblue;
-        }
-        img {
-            width: 300px;
-            height: 300px;
-            border-radius: 10%;
-            align-self: center;
-            box-shadow: 1px 1px 2px 1px #808080;
-        }
-    </style>
+    <title>GitPub</title>
 </head>
 <body>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+        img{
+            height: 15vh;
+            padding-bottom: 10px;
+        }
+      </style>
 
-    <h2><%= food.name %></h2>
-    <img src="<%= food.image%>" alt="food image">
-    <h3><%= food.price %></h3>
-    <a href="/foods">Back to Index</a>
+    <h1>At Foo Bar</h1>
+    <h2><%= item.name %>  </h2>
+    <h3>$<%= item.price %> </h3>
+    <img src="<%= item.image %>.png"> <br>
+    <a href="/food">Back</a>
 </body>
 </html>

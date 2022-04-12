@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to GitPub</title>
-    <style type='text/css'>
-        body {
-            color: blanchedalmond;
-            background-color: steelblue;
-        }
-    </style>
 </head>
 <body>
-    <h1>Welcome to GitPub</h1>
-    <h2>Drinks</h2>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+        li::first-letter{ text-transform:capitalize;}
+    
+      </style>
+
+    <h1>Welcome to GitPub - Drinks Menu</h1>
+
     <ul>
-        <% for(let i = 0; i < allDrinks.length; i++) { %>
-            <li id='drink'>
-                <a href="/drinks/<%=i%>"><%=allDrinks[i].name.charAt(0).toUpperCase() + allDrinks[i].name.slice(1) %></a>
-            </li>
-            <br>
-        <% } %>
+        <% for (let drink in allDrinks){%>
+        <li>
+            <a href="/drinks/<%= drink %>"><%= allDrinks[drink].name%></a>
+           <% } %> 
+        </li>
     </ul>
+ <a href="/"> Return Home </a>
+
+
 </body>
 </html>

@@ -1,5 +1,4 @@
-
-   
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,33 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Drinks</title>
-    <style>
-        header {
-            text-align: left;
-            margin: 2em;
-        }
-        body {
-            max-width: 300px;
-            margin-left: 5%;
-            color: blanchedalmond;
-            background-color: steelblue;
-        }
-        img {
-            width: 300px;
-            height: 300px;
-            border-radius: 10%;
-            align-self: center;
-            box-shadow: 1px 1px 2px 1px #808080;
-        }
-    </style>
 </head>
-
 <body>
-    <h1>At foo bar</h1>
-    <h2><%= drink.name %></h2>
-    <img src="<%= drink.image%>" alt="drink image">
-    <h3><%= drink.price %></h3>
-    <a href="/drinks">Back to Index</a>
-</body>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+        h2::first-letter{ text-transform:capitalize;
+        }
+        img{
+            height: 30vh;
+            padding-bottom: 20px;
+        }
+        
+      </style>
 
+    <h1>At Foo Bar</h1>
+    <h2><%= drink.name %>  </h2>
+    <h3>$<%= drink.price %> </h3>
+    <img src="<%= drink.image %>.png"> <br>
+    <a href="/drinks">Back</a>
+</body>
 </html>
